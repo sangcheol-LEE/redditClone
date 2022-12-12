@@ -21,10 +21,10 @@ export class User {
     password: string
 
     @OneToMany(() => Post, (post) => post.user)
-    posts: Post[]
+    posts: Post[];
 
-    @OneToMany(() => Vote,(vote) => vote.user)
-    votes: Vote[]
+    @OneToMany(() => Vote, (vote) => vote.user)
+    votes: Vote[];ß
 
     @BeforeInsert()
     async hashPassword() {
