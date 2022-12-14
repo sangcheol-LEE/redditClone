@@ -27,7 +27,7 @@ export class User extends BaseEntity {
     posts: Post[];
 
     @OneToMany(() => Vote, (vote) => vote.user)
-    votes: Vote[];ß
+    votes: Vote[];
 
     @BeforeInsert()
     async hashPassword() {
